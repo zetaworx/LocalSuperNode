@@ -1,0 +1,44 @@
+[2016-07-26 08:37:11] lb build noauto
+P: live-build 5.0~a11
+P: Building config tree for a debian/stretch/amd64 system
+[2016-07-26 08:37:11] lb bootstrap 
+P: Setting up cleanup function
+[2016-07-26 08:37:12] lb bootstrap_cache restore
+P: Restoring bootstrap stage from cache...
+[2016-07-26 08:37:31] lb bootstrap_debootstrap 
+P: Begin bootstrapping system...
+W: skipping bootstrap, already done
+[2016-07-26 08:37:31] lb bootstrap_archive-keys 
+Hit:1 http://cloudfront.debian.net/debian stretch InRelease
+Reading package lists...
+[2016-07-26 08:37:33] lb bootstrap_cache save
+P: Saving bootstrap stage to cache...
+[2016-07-26 08:37:45] lb chroot_devpts install
+P: Begin mounting /dev/pts...
+[2016-07-26 08:37:46] lb chroot_proc install
+P: Begin mounting /proc...
+[2016-07-26 08:37:46] lb chroot_selinuxfs install
+[2016-07-26 08:37:46] lb chroot_sysfs install
+P: Begin mounting /sys...
+[2016-07-26 08:37:47] lb chroot_debianchroot install
+P: Configuring file /etc/debian_chroot
+[2016-07-26 08:37:47] lb chroot_dpkg install
+P: Configuring file /sbin/start-stop-daemon
+[2016-07-26 08:37:50] lb chroot_tmpfs install
+[2016-07-26 08:37:50] lb chroot_sysv-rc install
+P: Configuring file /usr/sbin/policy-rc.d
+[2016-07-26 08:37:50] lb chroot_hosts install
+P: Configuring file /etc/hosts
+[2016-07-26 08:37:50] lb chroot_resolv install
+P: Configuring file /etc/resolv.conf
+[2016-07-26 08:37:50] lb chroot_hostname install
+P: Configuring file /etc/hostname
+P: Configuring file /bin/hostname
+[2016-07-26 08:37:51] lb chroot_apt install
+P: Configuring file /etc/apt/apt.conf
+[2016-07-26 08:37:51] lb bootstrap_archives binary
+P: Configuring file /etc/apt/sources.list
+Get:1 http://security.debian.org stretch/updates InRelease [68.2 kB]
+Hit:2 http://cloudfront.debian.net/debian stretch InRelease
+Get:3 http://cloudfront.debian.net/debian stretch-updates InRelease [124 kB]
+Get:4 http://cloudfront.debian.net/debian stretch/main Sources [8142 kB]
