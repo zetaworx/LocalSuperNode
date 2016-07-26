@@ -1,12 +1,20 @@
 # LocalSuperNode
 
+This repo contains the configuration files for Debian live-build to generate an Local Mesh Supernode for Freifunk.
+
+The use of this Supernode is experimental. Please ask your community before you use it in a production network.
+
+## Overview
+
 Status: Experimental
 
 License: GPL
 
-This repo contains the configuration to generate an Local Mesh Supernode for Freifunk.
-
-The use of this Supernode is experimental. Please ask your community before you use it in a production network.
+Features:
+* batman-adv (gateway mode)
+* dns-server (dnsmasq)
+* dhcp-server (dnsmasq)
+* IPv6 support planned
 
 ## Howto build your Supernode
 You need live-build 5.0~a11-1.
@@ -27,10 +35,10 @@ Please take a look to config/hooks/live for customizing configuration
 To modify packages edit config/package-list/default.list.chroot
 
 ## ToDo
-* use batman-adv backport
 * persistent configuration support and scripts
+* IPv6 support is missing
 
 ## History
 
 ### Version 0.1.0
-Inital commit
+First Release
