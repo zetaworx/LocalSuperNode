@@ -1,10 +1,12 @@
 # LocalSuperNode
 
 Status: Experimental
+
 License: GPL
 
 This repo contains the configuration to generate an Local Mesh Supernode for Freifunk.
 
+The use of this Supernode is experimental. Please ask your community before you use it in a production network.
 
 ## Howto build your Supernode
 You need live-build 5.0~a11-1.
@@ -18,6 +20,11 @@ For more information visit https://debian-live.alioth.debian.org/live-manual/uns
 ## Default Configuration
 * eth0: dhcp
 * eth0.vlan12: 172.16.0.1/22; batman-adv, dhcp-server, dns-server
+
+## Customizing
+Please take a look to config/hooks/live for customizing configuration
+
+To modify packages edit config/package-list/default.list.chroot
 
 ## ToDo
 * use batman-adv backport
