@@ -1,0 +1,15 @@
+[Unit]
+Description=batman-adv
+After=dnsmasq.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=no
+ExecStart=/usr/sbin/batctl if add br0
+ExecStart=/usr/sbin/batctl it 5000
+ExecStart=/usr/sbin/batctl gw_mode server 20mbit/2mbit
+ExecStart=/bin/ip link set bat0 up
+ExecStart=/bin/ip addr add 172.16.0.1/22 broadcast 172.16.3.255 dev bat0
+
+[Install]
+WantedBy=multi-user.target

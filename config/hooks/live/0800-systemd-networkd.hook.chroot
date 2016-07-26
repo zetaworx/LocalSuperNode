@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -e
+
+# enable systemd-network 
+systemctl enable systemd-networkd
+

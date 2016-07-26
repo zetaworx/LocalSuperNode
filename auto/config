@@ -1,0 +1,33 @@
+#!/bin/sh
+
+set -e
+
+# --mirror-bootstrap http://cloudfront.debian.net/debian/ \
+# --mirror-binary http://cloudfront.debian.net/debian/ \
+# --linux-packages "linux-image linux-headers" \
+#        --binary-images iso-hybrid \
+#         --linux-flavours 686-pae \
+
+
+lb config noauto \
+        --architectures amd64 \
+	--apt-indices false \
+	--apt-recommends false \
+	--binary-images iso \
+        --bootappend-live "console=ttyS0,115200 console=tty0 noeject toram live-media=removable boot=live locales=en_US.UTF-8 keyboard-layouts=de" \
+        --cache=true \
+        --cache-packages true \
+        --debian-installer false \
+	--distribution stretch \
+        --initsystem systemd \
+        --system live \
+        --memtest none \
+        --verbose \
+        --iso-application tisun \
+        --iso-preparer netminion \
+        --iso-publisher netminion \
+        --iso-volume deb-tisun \
+ --mirror-bootstrap http://cloudfront.debian.net/debian/ \
+ --mirror-binary http://cloudfront.debian.net/debian/ \
+"${@}"
+

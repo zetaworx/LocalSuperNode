@@ -1,0 +1,7 @@
+[Match]
+Name=eth0
+
+[Network]
+DHCP=ipv4
+VLAN=eth0.12
+IPForward=yes

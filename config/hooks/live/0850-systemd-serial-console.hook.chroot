@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -e
+
+# enable serial console
+systemctl enable serial-getty@ttyS0.service
+
