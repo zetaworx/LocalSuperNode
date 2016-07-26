@@ -16,6 +16,8 @@ grub-install --no-floppy --boot-directory=/mnt/$MOUNTPOINT/boot /dev/$DRIVE
 
 cat <<EOF > /mnt/$MOUNTPOINT/boot/grub/grub.cfg
 set imgdevpath="/dev/disk/by-label/$LABEL"
+set default="0"
+set timeout=5
 
 menuentry '[loopback]Local Supernode' {
 	set isofile='/boot/iso/live-image-amd64.iso'
