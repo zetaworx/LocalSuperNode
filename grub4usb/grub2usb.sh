@@ -22,7 +22,7 @@ set timeout=5
 menuentry '[loopback]Local Supernode' {
 	set isofile='/boot/iso/live-image-amd64.iso'
 	loopback loop \$isofile
-	linux (loop)/live/vmlinuz console=ttyS0,115200 console=tty0 noeject toram live-media=removable boot=live locales=en_US.UTF-8 keyboard-layouts=de fromiso=/dev/disk/by-label/$LABEL\$isofile
+	linux (loop)/live/vmlinuz console=ttyS0,115200 console=tty0 noeject toram live-media=removable boot=live locales=en_US.UTF-8 keyboard-layouts=de fromiso=/dev/disk/by-label/$LABEL\$isofile persistence persistence-storage=file
 	initrd (loop)/live/initrd.img
 }
 EOF
