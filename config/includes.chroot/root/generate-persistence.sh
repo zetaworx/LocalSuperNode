@@ -15,7 +15,7 @@ dd if=/dev/null of=$FILE bs=1 count=0 seek=32M
 
 # mount persistence file
 mount -t ext4 /tmp/persistence $MNTPRST
-echo "/etc" > $MNTPRST/persistence.conf
+echo "/etc union" > $MNTPRST/persistence.conf
 sync
 umount $MNTPRST
 
