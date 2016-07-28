@@ -1,6 +1,6 @@
 [Unit]
 Description=batman-adv
-After=dnsmasq.service
+Before=dnsmasq.service
 
 [Service]
 Type=oneshot
