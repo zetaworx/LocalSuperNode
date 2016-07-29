@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+
+# links vim to vi
+
+ln -s /usr/bin/vi /usr/bin/vim
+
