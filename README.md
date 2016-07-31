@@ -34,8 +34,10 @@ Please take a look to config/hooks/live for customizing configuration
 
 To modify packages edit config/package-list/default.list.chroot
 
+## Persistent configuration
+It's working. Documentation comes later...
+
 ## ToDo
-* persistent configuration support and scripts
 * IPv6 support is missing
 
 ## History
