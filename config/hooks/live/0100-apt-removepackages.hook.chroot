@@ -6,6 +6,7 @@ set -e
 
 apt-get -y --purge remove \
 	doc-debian \
+	dqcache \
 	fonts-dejavu-core \
 	gcc-4.9-base \
 	gcc-5-base \
