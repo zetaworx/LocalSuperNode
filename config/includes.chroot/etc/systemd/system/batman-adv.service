@@ -11,8 +11,8 @@ ExecStart=/usr/sbin/batctl if add br0
 ExecStart=/usr/sbin/batctl it 5000
 ExecStart=/usr/sbin/batctl gw_mode server 20mbit/2mbit
 ExecStart=/bin/ip link set bat0 up
-ExecStart=/bin/ip addr add 172.16.0.1/22 dev bat0
-ExecStop=/bin/ip addr del 172.16.0.1/22 dev bat0
+ExecStart=/bin/ip addr add 10.25.0.1/19 dev bat0
+ExecStop=/bin/ip addr del 10.25.0.1/19 dev bat0
 ExecStop=/bin/ip link set bat0 down
 ExecStop=/usr/sbin/batctl if del br0
 
