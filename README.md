@@ -17,30 +17,43 @@ Features:
 * IPv6 support planned
 
 ## Howto build your Supernode
-You need live-build 5.0~a11-1.
 
-* lb clean
-* lb config
-* lb build
+Please adjust auto/config for jour needs and run the following commands.
 
-For more information visit https://debian-live.alioth.debian.org/live-manual/unstable/manual/html/live-manual.en.html
+```
+lb clean
+lb config
+lb build
+```
+
+This repo is tested with debian stretch and live-build 5.0~a11-1.
+
+For more information visit (https://debian-live.alioth.debian.org/live-manual/unstable/manual/html/live-manual.en.html)
 
 ## Default Configuration
-* eth0: dhcp
-* eth0.vlan12: 172.16.0.1/22; batman-adv, dhcp-server, dns-server
+* eth0: dhcp-client
+* eth0.vlan12: 10.25.0.1/19; batman-adv, dhcp-server, dns-server
 
 ## Customizing
-Please take a look to config/hooks/live for customizing configuration
+Please take a look to `config/hooks/live` and `config/includes.chroot` to customize the configuration
 
-To modify packages edit config/package-list/default.list.chroot
+To modify packages, edit `config/package-list/default.list.chroot`
 
 ## Persistent configuration
+
 It's working. Documentation comes later...
 
 ## ToDo
+
 * IPv6 support is missing
+* --persistent configuration--
+* Switch from dnsmasq to unbound and isc-dhcpd?
 
 ## History
 
 ### Version 0.1.0
+
 First Release
+
+* basic supernode settings are working
+* no IPv6 support
